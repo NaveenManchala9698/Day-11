@@ -28,6 +28,7 @@
     <div id="color">
       <div id="text-heading">
         <h1>Techmart</h1>
+        <button onclick="changeH1()">Change Heading</button>
       </div>
       <div id="table">
         <table>
@@ -146,9 +147,10 @@
         </footer>
       </div>
       <script>
-        let textHeadingNode = document.getElementById("text-heading");
-        console.log(textHeadingNode.textContent);
-        textHeadingNode.textContent = "SmartTech";
+        function changeH1() {
+          let textHeadingNode = document.getElementById("text-heading");
+          textHeadingNode.textContent = "SmartTech";
+        }
 
         let changePageColorNode = document.getElementById("color");
         changePageColorNode.style.backgroundColor = "white";
