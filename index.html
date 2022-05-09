@@ -49,13 +49,15 @@
               <td>
                 Echo Dot (4th generation) | Smart speaker with Alexa | charcoal
               </td>
-              <td>€39.99</td>
+              <td><div class="price">€39.99</div></td>
               <td>
-                <a
-                  href="https://www.amazon.de/s?k=alexa&crid=3J9WDFT1D6MAP&sprefix=Ale%2Caps%2C114&ref=nb_sb_ss_ts-doa-p_1_3"
-                  target="_blank"
-                  >Purchase</a
-                >
+                <div class="links">
+                  <a
+                    href="https://www.amazon.de/s?k=alexa&crid=3J9WDFT1D6MAP&sprefix=Ale%2Caps%2C114&ref=nb_sb_ss_ts-doa-p_1_3"
+                    target="_blank"
+                    >Purchase</a
+                  >
+                </div>
               </td>
             </tr>
             <tr>
@@ -66,13 +68,15 @@
                 Apple MacBook Pro (14", Apple M1 Pro Chip mit 8‑Core CPU und
                 14‑Core GPU, 16 GB RAM, 512 GB SSD) - Space Grau
               </td>
-              <td>€1989.00</td>
+              <td><div class="price">€1989.00</div></td>
               <td>
-                <a
-                  href="https://www.amazon.de/MKGR3D-A/dp/B09JQWZPTS/ref=sr_1_2_sspa?keywords=apple%2Bmacbook%2Bpro&qid=1652102549&sr=8-2-spons&th=1"
-                  target="_blank"
-                  >Purchase</a
-                >
+                <div class="links">
+                  <a
+                    href="https://www.amazon.de/MKGR3D-A/dp/B09JQWZPTS/ref=sr_1_2_sspa?keywords=apple%2Bmacbook%2Bpro&qid=1652102549&sr=8-2-spons&th=1"
+                    target="_blank"
+                    >Purchase</a
+                  >
+                </div>
               </td>
             </tr>
             <tr>
@@ -80,13 +84,15 @@
               <td>Bose Headphones</td>
               <td><img src="Bose.jpg" /></td>
               <td>Bose Headphones 700</td>
-              <td>€220</td>
+              <td><div class="price">€220</div></td>
               <td>
-                <a
-                  href="https://www.amazon.de/Bose-Noise-Cancelling-Headphones-Schwarz/dp/B07Q9MJKBV/ref=asc_df_B07Q9MJKBV/?tag=&linkCode=df0&hvadid=375009322207&hvpos=&hvnetw=g&hvrand=3708531700838159275&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9043013&hvtargid=pla-784806209897&th=1&ref=&adgrpid=80472873047"
-                  target="_blank"
-                  >Purchase</a
-                >
+                <div class="links">
+                  <a
+                    href="https://www.amazon.de/Bose-Noise-Cancelling-Headphones-Schwarz/dp/B07Q9MJKBV/ref=asc_df_B07Q9MJKBV/?tag=&linkCode=df0&hvadid=375009322207&hvpos=&hvnetw=g&hvrand=3708531700838159275&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9043013&hvtargid=pla-784806209897&th=1&ref=&adgrpid=80472873047"
+                    target="_blank"
+                    >Purchase</a
+                  >
+                </div>
               </td>
             </tr>
             <tr>
@@ -97,13 +103,15 @@
                 Dell Alienware 610M Wired / Wireless Gaming Mouse - AW610M
                 (Gray)
               </td>
-              <td>€80</td>
+              <td><div class="price">€80</div></td>
               <td>
-                <a
-                  href="https://www.amazon.de/10002547/dp/B07SH12ZTK/ref=sr_1_1_sspa?crid=1O07IK49DW1I8&keywords=monitor+hp&qid=1652102323&sprefix=monitor+hp,aps,128&sr=8-1-spons&psc=1"
-                  target="_blank"
-                  >Purchase</a
-                >
+                <div class="links">
+                  <a
+                    href="https://www.amazon.de/10002547/dp/B07SH12ZTK/ref=sr_1_1_sspa?crid=1O07IK49DW1I8&keywords=monitor+hp&qid=1652102323&sprefix=monitor+hp,aps,128&sr=8-1-spons&psc=1"
+                    target="_blank"
+                    >Purchase</a
+                  >
+                </div>
               </td>
             </tr>
             <tr>
@@ -115,13 +123,15 @@
                 FreeSync, HDMI, VGA, 1920 x 1080, 60Hz, 5ms Reaktionszeit /
                 silber (Generalüberholt)
               </td>
-              <td>€240</td>
+              <td><div class="price">€240</div></td>
               <td>
-                <a
-                  href="https://www.amazon.de/s?k=alexa&crid=3J9WDFT1D6MAP&sprefix=Ale%2Caps%2C114&ref=nb_sb_ss_ts-doa-p_1_3"
-                  target="_blank"
-                  >Purchase</a
-                >
+                <div class="links">
+                  <a
+                    href="https://www.amazon.de/s?k=alexa&crid=3J9WDFT1D6MAP&sprefix=Ale%2Caps%2C114&ref=nb_sb_ss_ts-doa-p_1_3"
+                    target="_blank"
+                    >Purchase</a
+                  >
+                </div>
               </td>
             </tr>
           </tbody>
@@ -141,10 +151,30 @@
         textHeadingNode.textContent = "SmartTech";
 
         let changePageColorNode = document.getElementById("color");
-        changePageColorNode.style.backgroundColor = "green";
+        changePageColorNode.style.backgroundColor = "white";
 
         let changeAddressNode = document.getElementById("address");
         changeAddressNode.textContent = "25-584, VR Avenue, U.S.A ";
+
+        function selectAllLinks() {
+          let linksNode = document.getElementsByClassName("links");
+
+          for (i = 0; i < linksNode.length; i++) {
+            let linkNode = linksNode[i];
+            linkNode.classList.toggle("selected");
+          }
+        }
+
+        function colorOfPrice() {
+          let changeColorNodes = document.getElementsByClassName("price");
+          for (let i = 0; i < changeColorNodes.length; i++) {
+            const red = Math.round(Math.random() * 255);
+            const green = Math.round(Math.random() * 255);
+            const blue = Math.round(Math.random() * 255);
+            changeColorNodes[i].style.color =
+              "rgb(" + red + ", " + green + ", " + blue + ")";
+          }
+        }
       </script>
     </div>
   </body>
