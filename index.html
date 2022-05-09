@@ -18,118 +18,134 @@
         margin-left: auto;
         margin-right: auto;
       }
+      #color {
+        background-color: aqua;
+      }
     </style>
   </head>
+
   <body>
-    <div id="heading">
-      <h1>Techmart</h1>
+    <div id="color">
+      <div id="text-heading">
+        <h1>Techmart</h1>
+      </div>
+      <div id="table">
+        <table>
+          <thead>
+            <tr>
+              <th>S.No</th>
+              <th>Product Name</th>
+              <th>Image</th>
+              <th>Description</th>
+              <th>Price</th>
+              <th>Product Link</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1.</td>
+              <td>Amazon Alexa</td>
+              <td><img src="Alexa.jpg" /></td>
+              <td>
+                Echo Dot (4th generation) | Smart speaker with Alexa | charcoal
+              </td>
+              <td>€39.99</td>
+              <td>
+                <a
+                  href="https://www.amazon.de/s?k=alexa&crid=3J9WDFT1D6MAP&sprefix=Ale%2Caps%2C114&ref=nb_sb_ss_ts-doa-p_1_3"
+                  target="_blank"
+                  >Purchase</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>2.</td>
+              <td>Macbook Pro</td>
+              <td><img src="Macbook.jpg" /></td>
+              <td>
+                Apple MacBook Pro (14", Apple M1 Pro Chip mit 8‑Core CPU und
+                14‑Core GPU, 16 GB RAM, 512 GB SSD) - Space Grau
+              </td>
+              <td>€1989.00</td>
+              <td>
+                <a
+                  href="https://www.amazon.de/MKGR3D-A/dp/B09JQWZPTS/ref=sr_1_2_sspa?keywords=apple%2Bmacbook%2Bpro&qid=1652102549&sr=8-2-spons&th=1"
+                  target="_blank"
+                  >Purchase</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>3.</td>
+              <td>Bose Headphones</td>
+              <td><img src="Bose.jpg" /></td>
+              <td>Bose Headphones 700</td>
+              <td>€220</td>
+              <td>
+                <a
+                  href="https://www.amazon.de/Bose-Noise-Cancelling-Headphones-Schwarz/dp/B07Q9MJKBV/ref=asc_df_B07Q9MJKBV/?tag=&linkCode=df0&hvadid=375009322207&hvpos=&hvnetw=g&hvrand=3708531700838159275&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9043013&hvtargid=pla-784806209897&th=1&ref=&adgrpid=80472873047"
+                  target="_blank"
+                  >Purchase</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>4.</td>
+              <td>Dell Wireless Mouse</td>
+              <td><img src="Mouse.jpg" /></td>
+              <td>
+                Dell Alienware 610M Wired / Wireless Gaming Mouse - AW610M
+                (Gray)
+              </td>
+              <td>€80</td>
+              <td>
+                <a
+                  href="https://www.amazon.de/10002547/dp/B07SH12ZTK/ref=sr_1_1_sspa?crid=1O07IK49DW1I8&keywords=monitor+hp&qid=1652102323&sprefix=monitor+hp,aps,128&sr=8-1-spons&psc=1"
+                  target="_blank"
+                  >Purchase</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>5.</td>
+              <td>HP Monitor</td>
+              <td><img src="Monitor.jpg" /></td>
+              <td>
+                HP 27fw Monitor - 27 Zoll Bildschrim, Full HD IPS Display, AMD
+                FreeSync, HDMI, VGA, 1920 x 1080, 60Hz, 5ms Reaktionszeit /
+                silber (Generalüberholt)
+              </td>
+              <td>€240</td>
+              <td>
+                <a
+                  href="https://www.amazon.de/s?k=alexa&crid=3J9WDFT1D6MAP&sprefix=Ale%2Caps%2C114&ref=nb_sb_ss_ts-doa-p_1_3"
+                  target="_blank"
+                  >Purchase</a
+                >
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <textarea rows="10" cols="50">Enter your message here</textarea>
+      <input type="submit" name="Send" value="send" />
+      <div id="address">
+        <footer>
+          <h2>XTechmart</h2>
+          <p>Techmart Technologies 255/12-3, luther Street, California</p>
+        </footer>
+      </div>
+      <script>
+        let textHeadingNode = document.getElementById("text-heading");
+        console.log(textHeadingNode.textContent);
+        textHeadingNode.textContent = "SmartTech";
+
+        let changePageColorNode = document.getElementById("color");
+        changePageColorNode.style.backgroundColor = "green";
+
+        let changeAddressNode = document.getElementById("address");
+        changeAddressNode.textContent = "25-584, VR Avenue, U.S.A ";
+      </script>
     </div>
-    <div id="table">
-      <table>
-        <thead>
-          <tr>
-            <th>S.No</th>
-            <th>Product Name</th>
-            <th>Image</th>
-            <th>Description</th>
-            <th>Price</th>
-            <th>Product Link</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>1.</td>
-            <td>Amazon Alexa</td>
-            <td><img src="Alexa.jpg" /></td>
-            <td>
-              Echo Dot (4th generation) | Smart speaker with Alexa | charcoal
-            </td>
-            <td>€39.99</td>
-            <td>
-              <a
-                href="https://www.amazon.de/s?k=alexa&crid=3J9WDFT1D6MAP&sprefix=Ale%2Caps%2C114&ref=nb_sb_ss_ts-doa-p_1_3"
-                target="_blank"
-                >Purchase</a
-              >
-            </td>
-          </tr>
-          <tr>
-            <td>2.</td>
-            <td>Macbook Pro</td>
-            <td><img src="Macbook.jpg" /></td>
-            <td>
-              Apple MacBook Pro (14", Apple M1 Pro Chip mit 8‑Core CPU und
-              14‑Core GPU, 16 GB RAM, 512 GB SSD) - Space Grau
-            </td>
-            <td>€1989.00</td>
-            <td>
-              <a
-                href="https://www.amazon.de/MKGR3D-A/dp/B09JQWZPTS/ref=sr_1_2_sspa?keywords=apple%2Bmacbook%2Bpro&qid=1652102549&sr=8-2-spons&th=1"
-                target="_blank"
-                >Purchase</a
-              >
-            </td>
-          </tr>
-          <tr>
-            <td>3.</td>
-            <td>Bose Headphones</td>
-            <td><img src="Bose.jpg" /></td>
-            <td>Bose Headphones 700</td>
-            <td>€220</td>
-            <td>
-              <a
-                href="https://www.amazon.de/Bose-Noise-Cancelling-Headphones-Schwarz/dp/B07Q9MJKBV/ref=asc_df_B07Q9MJKBV/?tag=&linkCode=df0&hvadid=375009322207&hvpos=&hvnetw=g&hvrand=3708531700838159275&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9043013&hvtargid=pla-784806209897&th=1&ref=&adgrpid=80472873047"
-                target="_blank"
-                >Purchase</a
-              >
-            </td>
-          </tr>
-          <tr>
-            <td>4.</td>
-            <td>Dell Wireless Mouse</td>
-            <td><img src="Mouse.jpg" /></td>
-            <td>
-              Dell Alienware 610M Wired / Wireless Gaming Mouse - AW610M (Gray)
-            </td>
-            <td>€80</td>
-            <td>
-              <a
-                href="https://www.amazon.de/10002547/dp/B07SH12ZTK/ref=sr_1_1_sspa?crid=1O07IK49DW1I8&keywords=monitor+hp&qid=1652102323&sprefix=monitor+hp,aps,128&sr=8-1-spons&psc=1"
-                target="_blank"
-                >Purchase</a
-              >
-            </td>
-          </tr>
-          <tr>
-            <td>5.</td>
-            <td>HP Monitor</td>
-            <td><img src="Monitor.jpg" /></td>
-            <td>
-              HP 27fw Monitor - 27 Zoll Bildschrim, Full HD IPS Display, AMD
-              FreeSync, HDMI, VGA, 1920 x 1080, 60Hz, 5ms Reaktionszeit / silber
-              (Generalüberholt)
-            </td>
-            <td>€240</td>
-            <td>
-              <a
-                href="https://www.amazon.de/s?k=alexa&crid=3J9WDFT1D6MAP&sprefix=Ale%2Caps%2C114&ref=nb_sb_ss_ts-doa-p_1_3"
-                target="_blank"
-                >Purchase</a
-              >
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <textarea rows="10" cols="50">Enter your message here</textarea>
-    <input type="submit" name="Send" value="send" />
-    <script>
-      let h1Node = documemnt.getElementById("heading");
-      h1Node.textContent = "SmartTech";
-    </script>
   </body>
-  <footer>
-    <h2>XTechmart</h2>
-    <p>Techmart Technologies 255/12-3, luther Street, California</p>
-  </footer>
 </html>
