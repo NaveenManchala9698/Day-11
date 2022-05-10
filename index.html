@@ -21,6 +21,9 @@
       #color {
         background-color: aqua;
       }
+      .image {
+        visibility: hidden;
+      }
     </style>
   </head>
 
@@ -29,6 +32,7 @@
       <div id="text-heading">
         <h1>Techmart</h1>
         <button onclick="changeH1()">Change Heading</button>
+        <button onclick="changeimages()">Click Me</button>
       </div>
       <div id="table">
         <table>
@@ -148,12 +152,13 @@
       </div>
       <script>
         function changeH1() {
-          let textHeadingNode = document.getElementById("text-heading");
-          textHeadingNode.textContent = "SmartTech";
+          let textHeadingNode = document.querySelector("h1");
+          textHeadingNode.innerText = "SmartTech";
         }
 
-        let changePageColorNode = document.getElementById("color");
-        changePageColorNode.style.backgroundColor = "white";
+        const changeBackgroundColor = function () {
+          document.querySelector("color").style.backgroundColor = "green";
+        };
 
         let changeAddressNode = document.getElementById("address");
         changeAddressNode.textContent = "25-584, VR Avenue, U.S.A ";
@@ -164,6 +169,14 @@
           for (i = 0; i < linksNode.length; i++) {
             let linkNode = linksNode[i];
             linkNode.classList.toggle("selected");
+          }
+        }
+
+        function changeimages() {
+          let changeImageNodes = document.querySelectorAll("img");
+
+          for (i = 0; i < changeImageNodes.length; i++) {
+            changeImageNodes[i].classList.toggle("image");
           }
         }
 
